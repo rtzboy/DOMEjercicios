@@ -3,6 +3,7 @@ let idIntervalRight;
 let idIntervalUp;
 let idIntervalDown;
 let idIntervalLeft;
+var speedValue;
 var countX = 0;
 var countY = 0;
 
@@ -30,21 +31,25 @@ const moveBall = (idCircle, idBoard, eventBoard) => {
 
   if (keyName === "ArrowRight") {
     changeStates(eventBoard.keyCode, true);
+    getValue();
     activadoraRight();
     eventBoard.preventDefault();
   }
   if (keyName === "ArrowLeft") {
     changeStates(eventBoard.keyCode, true);
+    getValue();
     activadoraLeft();
     eventBoard.preventDefault();
   }
   if (keyName === "ArrowDown") {
     changeStates(eventBoard.keyCode, true);
+    getValue();
     activadoraDown();
     eventBoard.preventDefault();
   }
   if (keyName === "ArrowUp") {
     changeStates(eventBoard.keyCode, true);
+    getValue();
     activadoraUp();
     eventBoard.preventDefault();
   }
@@ -57,7 +62,7 @@ const moveBall = (idCircle, idBoard, eventBoard) => {
           addX();
           $circ.style.transform = `translate(${countX}px, ${countY}px)`;
         }
-      }, 60);
+      }, speedValue);
     }
   }
 
@@ -68,7 +73,7 @@ const moveBall = (idCircle, idBoard, eventBoard) => {
           lessY();
           $circ.style.transform = `translate(${countX}px, ${countY}px)`;
         }
-      }, 60);
+      }, speedValue);
     }
   }
 
@@ -79,7 +84,7 @@ const moveBall = (idCircle, idBoard, eventBoard) => {
           lessX();
           $circ.style.transform = `translate(${countX}px, ${countY}px)`;
         }
-      }, 60);
+      }, speedValue);
     }
   }
 
@@ -91,10 +96,32 @@ const moveBall = (idCircle, idBoard, eventBoard) => {
           addY();
           $circ.style.transform = `translate(${countX}px, ${countY}px)`;
         }
-      }, 60);
+      }, speedValue);
     }
   }
 };
+// -- velocidad ball
+
+function getValue() {
+  let valueSpeed = d.getElementById("speed").value;
+  switch (Number(valueSpeed)) {
+    case 10:
+      speedValue = 100;
+      break;
+    case 40:
+      speedValue = 70;
+      break;
+    case 70:
+      speedValue = 40;
+      break;
+    case 100:
+      speedValue = 10;
+      break;
+    default:
+      break;
+  }
+}
+//
 
 const shortCts = eventKeyboard => {
   const keyName = eventKeyboard.key;
@@ -118,6 +145,7 @@ const resetButton = (clssBtn, idCicle) => {
   d.addEventListener("click", evt => {
     if (evt.target.matches(clssBtn)) {
       $circle.style.transform = `translate(0, 0)`;
+      d.getElementById("speed").value = 10;
       countX = 0;
       countY = 0;
     }
@@ -163,4 +191,4 @@ const testUp = evnto => {
   }
 };
 
-export { moveBall, shortCts, resetButton, testUp };
+export { moveBall, shortCts, resetButton, testUp, getValue };

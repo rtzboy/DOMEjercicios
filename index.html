@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cssreset.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-section.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header_title">Ejercicios del DOM</h1>
+    </header>
+    <nav class="nav">
+      <ul class="nav_list">
+        <li class="nav_item"><a href="#sect1" class="sec1">Reloj Digital y Alarma Sonora</a></li>
+        <li class="nav_item"><a href="#sect2" class="sec2">Eventos Del Teclado</a></li>
+        <li class="nav_item"><a href="#sect3" class="sec3">Section3</a></li>
+        <li class="nav_item"><a href="#sect4" class="sec4">Section4</a></li>
+        <li class="nav_item"><a href="#sect5" class="sec5">Section5</a></li>
+        <li class="nav_item"><a href="#sect6" class="sec6">Edad en dias</a></li>
+      </ul>
+    </nav>
+    <main class="main">
+      <section class="section main_section1" id="sect1">
+        <h2>Reloj Digital y Alarma Sonora</h2>
+        <div class="clock" id="clockAlarma"></div>
+        <button class="btn btn1">Iniciar Reloj</button>
+        <button class="btn btn2">Detener Reloj</button>
+        <button class="btn btn3">Iniciar Alarma</button>
+        <button class="btn btn4">Detener Alarma</button>
+      </section>
+      <section class="section main_section2" id="sect2">
+        <h2>Eventos Del Teclado</h2>
+        <div class="board">
+          <div class="circle"></div>
+        </div>
+        <div class="btn_board">
+          <button class="btn btn_reset">Reset</button>
+        </div>
+      </section>
+      <section class="section main_section3" id="sect3"><h2>Section3</h2></section>
+      <section class="section main_section4" id="sect4"><h2>Section4</h2></section>
+      <section class="section main_section5" id="sect5"><h2>Section5</h2></section>
+      <section class="section main_section6" id="sect6">
+        <h2>Edad en dias</h2>
+        <div class="container_flex">
+          <div class="container_flex_item container_item1">Reto 1: Tu edad en dias</div>
+          <div class="container_flex_item container_item2">
+            <button class="btnStart">click me</button>
+            <button class="btnReset">reset</button>
+          </div>
+          <div class="container_flex_item container_item3"></div>
+        </div>
+      </section>
+    </main>
+    <button class="myham hamburger hamburger--spring" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+
+:root {
+  --main-color: rgb(251, 214, 23);
+  --second-color: rgb(27, 27, 27);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Nunito", sans-serif;
+  /* user-select: none; */
+}
+
+body {
+  position: relative;
+}
+
+.header {
+  background-color: var(--main-color);
+  height: 7vh;
+}
+
+.header_title {
+  text-align: center;
+  font-size: 1.7rem;
+  line-height: 4rem;
+}
+
+.nav {
+  position: fixed;
+  z-index: 19;
+  top: 0;
+  width: 100%;
+  /* height: 100vh; */
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  /* transform: translate(0, -100%); */
+  /* transform: translate(0, 100%); */
+  transform: translate(100%, 0);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.nav.is-ve {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  flex-flow: column wrap;
+}
+
+.nav_list li {
+  text-align: center;
+}
+
+.nav_item a {
+  display: block;
+  padding: 2rem;
+  color: var(--main-color);
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav_item a:hover {
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: rgb(0, 0, 0);
+}
+
+.main .section {
+  height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.myham {
+  position: fixed;
+  z-index: 20;
+  width: 60px;
+  height: 60px;
+  bottom: 1vh;
+  right: 1vw;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+
+/* buttons */
+
+.btn {
+  padding: 0.6rem 1.1rem;
+  margin: 0.5rem;
+  border: 2px solid black;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: rgb(34, 34, 34);
+  color: #fff;
+}
+
+.btn:disabled {
+  background-color: rgb(133, 133, 133);
+  color: rgb(218, 218, 218);
+}
+
+/* ---CLOCK -- */
+.clock {
+  padding: 0 0;
+  /* border: 1px solid #000; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  /* width: 200px;
+  height: 50px; */
+  width: 0;
+  height: 0;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  transition: all 0.6s ease-in-out;
+}
+.clock-active {
+  padding: 0.5rem 0.9rem;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #000;
+}
+
+/* board */
+
+.board {
+  width: 80%;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--second-color);
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  transition: all 0.4s ease-out;
+  transform: translate(0, 0);
+}
+
+@media screen and (min-width: 1200px) {
+  .nav {
+    /* width: 1200px; */
+    max-width: 1200px;
+  }
+}

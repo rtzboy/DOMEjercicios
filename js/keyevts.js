@@ -191,4 +191,4 @@ const testUp = evnto => {
   }
 };
 
-export { moveBall, shortCts, resetButton, testUp, getValue };
+export { moveBall, shortCts, resetButton, testUp };

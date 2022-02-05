@@ -34,11 +34,11 @@ function setTime() {
     sec = Math.floor(minutesms / 1000);
 
   $h3.innerHTML = `faltan: ${days} dias - ${hours} horas - ${minutes} minutos - ${sec} segundos`;
-  stopCounting(sec);
+  stopCounting(days, hours, minutes, sec);
 }
 
-function stopCounting(value) {
-  if (value === 0) {
+function stopCounting(value, valueTwo, valueThree, valueFour) {
+  if (value === 0 && valueTwo === 0 && valueThree === 0 && valueFour === 0) {
     clearInterval(idInterval);
     idInterval = null;
     // alerta
@@ -52,4 +52,4 @@ function stopCounting(value) {
   }
 }
 
-export { tempo };
+export default tempo;

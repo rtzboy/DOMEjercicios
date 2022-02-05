@@ -2,7 +2,8 @@ import { ageToDays } from "./age-day.js";
 import { alarm, clock } from "./clock.js";
 import { moveBall, resetButton, shortCts, testUp } from "./keyevts.js";
 import hamburgerMenu from "./menu-ham.js";
-import { tempo } from "./tempo.js";
+import tempo from "./tempo.js";
+// import { tempo } from "./tempo.js";
 
 const d = document;
 

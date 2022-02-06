@@ -14,7 +14,7 @@ d.addEventListener("DOMContentLoaded", evt => {
   alarm(".btn3", ".btn4");
   resetButton(".btn_reset", ".circle");
   tempo(".temporizador");
-  moveTop(".mybtnUp");
+  moveTop(".mybtnUp", ".btnUp");
 });
 
 d.addEventListener("keydown", evt => {

@@ -5,15 +5,15 @@
 
 .container_flex_item {
   padding: 15px 15px;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  border-top: 2px solid var(--second-color);
+  border-left: 2px solid var(--second-color);
+  border-right: 2px solid var(--second-color);
   border-radius: 15px;
   font-size: 1.6rem;
 }
 
 .container_flex div:last-child {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--second-color);
 }
 
 .container_flex .container_flex_item button {
@@ -24,6 +24,11 @@
   border-radius: 10px;
   color: white;
   display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.container_flex .container_flex_item button:hover {
+  transform: scale(1.1);
 }
 
 .container_item2 {

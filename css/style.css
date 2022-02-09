@@ -2,7 +2,23 @@
 
 :root {
   --main-color: rgb(251, 214, 23);
+  --background-color: rgb(255, 252, 238);
   --second-color: rgb(27, 27, 27);
+  --text-color: rgb(27, 27, 27);
+  --second-color-aux: rgb(248, 245, 220);
+  --color-ball: rgb(251, 214, 23);
+  --color-ball-shadow: rgb(60, 61, 6);
+  --color-button-dark: rgb(251, 214, 23);
+}
+
+[data-theme="dark"] {
+  --background-color: rgb(5, 5, 0);
+  --text-color: rgb(255, 255, 255);
+  --second-color: rgb(251, 214, 23);
+  --second-color-aux: rgb(10, 9, 1);
+  --color-ball: rgb(128, 126, 22);
+  --color-ball-shadow: rgb(8, 8, 1);
+  --color-button-dark: rgb(49, 49, 3);
 }
 
 html {
@@ -13,10 +29,11 @@ html {
 
 body {
   position: relative;
+  background-color: var(--background-color);
 }
 
 .header {
-  background-color: var(--main-color);
+  background-color: rgb(251, 214, 23);
   height: 7vh;
 }
 
@@ -31,7 +48,6 @@ body {
   z-index: 19;
   top: 0;
   width: 100%;
-  /* height: 100vh; */
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   padding-top: 10vh;
@@ -40,7 +56,7 @@ body {
   /* transform: translate(0, 100%); */
   transform: translate(200%, 0);
   opacity: 0;
-  transition: transform 0.7s ease, opacity 0.7s ease;
+  transition: transform 1.2s ease-out, opacity 0.7s ease;
 }
 
 .nav.is-ve {
@@ -76,11 +92,12 @@ body {
 .main .section {
   height: 100vh;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  color: var(--second-color);
 }
 
 .main .section label {
-  height: 100vh;
+  /* height: 100vh; */
   text-align: center;
   font-size: 1rem;
 }
@@ -98,7 +115,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-color);
+  background-color: rgb(251, 214, 23);
   border-radius: 50%;
 }
 
@@ -107,7 +124,8 @@ body {
 .btn {
   padding: 0.6rem 1.1rem;
   margin: 0.5rem;
-  border: 2px solid black;
+  border: 2px solid var(--second-color);
+  color: var(--text-color);
   font-size: 0.9rem;
   font-weight: bold;
   border-radius: 0.5rem;
@@ -115,8 +133,8 @@ body {
 }
 
 .btn:hover {
-  background-color: rgb(34, 34, 34);
-  color: #fff;
+  background-color: var(--second-color);
+  color: var(--second-color-aux);
 }
 
 .btn:disabled {
@@ -146,7 +164,7 @@ body {
   height: 50px;
   margin-top: 20px;
   margin-bottom: 20px;
-  border: 2px solid #000;
+  border: 2px solid var(--second-color);
 }
 
 /* board */
@@ -164,7 +182,8 @@ body {
 .circle {
   width: 50px;
   height: 50px;
-  background-color: var(--main-color);
+  /* background-color: var(--color-ball); */
+  background-image: radial-gradient(circle at top, var(--color-ball), 50%, var(--color-ball-shadow));
   border-radius: 50%;
   transition: all 0.4s ease-out;
   transform: translate(0, 0);
@@ -182,7 +201,7 @@ input[type="range"] {
   height: 7px;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 15px;
-  background-image: linear-gradient(#eeff00, #ff9d00);
+  background-image: linear-gradient(var(--main-color), #ff9d00);
   background-repeat: no-repeat;
 }
 
@@ -237,12 +256,13 @@ input[type="range"]::-webkit-slider-runnable-track {
   width: 60px;
   height: 60px;
   bottom: 1vh;
-  right: 6vw;
+  /* right: 6vw; */
+  right: calc(70px + 1vw);
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-color);
+  background-color: rgb(251, 214, 23);
   border-radius: 50%;
 }
 
@@ -284,6 +304,82 @@ input[type="range"]::-webkit-slider-runnable-track {
 .btnRot {
   transform: rotate(-90deg);
 }
+
+/* button - darkmode */
+.mybtnDark {
+  padding: 10px 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  overflow: visible;
+  transition: visibility 1s ease-out, opacity 1s ease-out;
+}
+
+.btnDarkMode {
+  position: fixed;
+  z-index: 21;
+  width: 60px;
+  height: 60px;
+  bottom: 1vh;
+  left: 1vw;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-button-dark);
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.mybtnDark:hover {
+  opacity: 0.9;
+  background-color: var(--second-color);
+}
+
+/* delete ignored*/
+
+.circleContainer {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  background-image: radial-gradient(circle at top, lightblue, 50%, #000);
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotacion 8s linear infinite;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+.shadowBall {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  top: 101px;
+  border-radius: 50%;
+  background-image: radial-gradient(var(--second-color), var(--color-ball-shadow));
+}
+
+/* @keyframes rotacion {
+  to {
+    transform: rotateY(360deg);
+  }
+} */
+
+/*  */
 
 /* responsive */
 @media screen and (min-width: 1200px) {

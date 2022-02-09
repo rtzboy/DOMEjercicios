@@ -1,4 +1,5 @@
 import { ageToDays } from "./age-day.js";
+import { darkMode } from "./btn-darkmode.js";
 import moveTop from "./btnUp.js";
 import { alarm, clock } from "./clock.js";
 import { moveBall, resetButton, shortCts, testUp } from "./keyevts.js";
@@ -15,6 +16,7 @@ d.addEventListener("DOMContentLoaded", evt => {
   resetButton(".btn_reset", ".circle");
   tempo(".temporizador");
   moveTop(".mybtnUp", ".btnUp");
+  darkMode(".btnDarkMode", ".btcnUp-Arrow");
 });
 
 d.addEventListener("keydown", evt => {

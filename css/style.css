@@ -9,6 +9,8 @@
   --color-ball: rgb(251, 214, 23);
   --color-ball-shadow: rgb(60, 61, 6);
   --color-button-dark: rgb(251, 214, 23);
+  --color-hover-nav: rgba(0, 0, 0, 0.8);
+  --color-hover-a: rgb(251, 214, 23);
 }
 
 [data-theme="dark"] {
@@ -19,6 +21,8 @@
   --color-ball: rgb(128, 126, 22);
   --color-ball-shadow: rgb(8, 8, 1);
   --color-button-dark: rgb(49, 49, 3);
+  --color-hover-nav: rgba(155, 145, 17, 0.8);
+  --color-hover-a: rgb(7, 6, 5);
 }
 
 html {
@@ -49,14 +53,14 @@ body {
   top: 0;
   width: 100%;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--color-hover-nav);
   padding-top: 10vh;
   padding-bottom: 10vh;
   /* transform: translate(0, -100%); */
   /* transform: translate(0, 100%); */
   transform: translate(200%, 0);
   opacity: 0;
-  transition: transform 1.2s ease-out, opacity 0.7s ease;
+  transition: transform 0.8s ease-out, opacity 0.7s ease;
 }
 
 .nav.is-ve {
@@ -77,16 +81,16 @@ body {
 
 .nav_item a {
   display: block;
-  padding: 2rem;
-  color: var(--main-color);
+  padding: 1.5rem 2rem;
+  color: var(--color-hover-a);
   font-size: 1.5rem;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s linear;
 }
 
 .nav_item a:hover {
   font-weight: bold;
-  background-color: var(--main-color);
-  color: rgb(0, 0, 0);
+  background-color: var(--color-hover-a);
+  color: var(--second-color);
 }
 
 .main .section {
@@ -359,9 +363,9 @@ input[type="range"]::-webkit-slider-runnable-track {
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
-  border-radius: 50%;
+  border-radius: 11%;
   position: relative;
-  animation: rotacion 8s linear infinite;
+  animation: rotacion 3s ease-in-out infinite alternate;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 .shadowBall {
@@ -374,12 +378,30 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 /* @keyframes rotacion {
-  to {
-    transform: rotateY(360deg);
+  0%,
+  10% {
+    transform: none;
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  90%,
+  100% {
+    transform: translateX(100px) rotate(30deg);
   }
 } */
 
-/*  */
+.section h2 {
+  padding-top: 1.1rem;
+}
+
+/*  responsive javascript*/
+
+.container_map,
+.container_video {
+  margin: 2rem 3rem;
+  padding: 1rem 2rem;
+}
 
 /* responsive */
 @media screen and (min-width: 1200px) {

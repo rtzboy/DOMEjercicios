@@ -11,6 +11,7 @@
   --color-button-dark: rgb(251, 214, 23);
   --color-hover-nav: rgba(0, 0, 0, 0.8);
   --color-hover-a: rgb(251, 214, 23);
+  --color-white: rgb(246, 246, 246);
 }
 
 [data-theme="dark"] {
@@ -23,6 +24,7 @@
   --color-button-dark: rgb(49, 49, 3);
   --color-hover-nav: rgba(155, 145, 17, 0.8);
   --color-hover-a: rgb(7, 6, 5);
+  --color-white: rgb(12, 12, 12);
 }
 
 html {
@@ -401,6 +403,60 @@ input[type="range"]::-webkit-slider-runnable-track {
 .container_video {
   margin: 2rem 3rem;
   padding: 1rem 2rem;
+}
+
+/* form */
+
+form {
+  margin: 15px auto;
+  width: 500px;
+  height: 250px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+}
+
+.form_content label {
+  display: inline-block;
+  width: 60px;
+}
+
+.form_content input {
+  display: inline-block;
+  width: 280px;
+}
+
+.form_input {
+  outline: none;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--second-color);
+  letter-spacing: 0.03rem;
+}
+
+.submit {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.submit .form_open,
+.submit .form_close {
+  border: 2px solid var(--second-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.submit .form_open:hover,
+.submit .form_close:hover {
+  color: var(--color-white);
+  background-color: var(--second-color);
 }
 
 /* responsive */

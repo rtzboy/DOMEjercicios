@@ -4,6 +4,7 @@ import moveTop from "./btnUp.js";
 import { alarm, clock } from "./clock.js";
 import { moveBall, resetButton, shortCts, testUp } from "./keyevts.js";
 import hamburgerMenu from "./menu-ham.js";
+import newURL from "./responsive-tster.js";
 import responsiveMedia from "./responsive_design.js";
 import tempo from "./tempo.js";
 
@@ -20,16 +21,17 @@ d.addEventListener("DOMContentLoaded", evt => {
   darkMode(".btnDarkMode", ".btcnUp-Arrow");
   responsiveMedia(
     "gmaps",
-    "(min-width: 700px)",
+    "(min-width: 1360px)",
     `<a href="https://www.google.com/maps/@-12.0123962,-77.0574007,18.25z" target="_blank">VerMapa</a>`,
     `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1160.2061826350377!2d-77.05732802412126!3d-12.012311592817056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cee2704f732b%3A0xa0691c9da25639bb!2sFiori%2C%20San%20Mart%C3%ADn%20de%20Porres%2015102!5e0!3m2!1sen!2spe!4v1644540424865!5m2!1sen!2spe" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`
   );
   responsiveMedia(
     "gyoutube",
-    "(min-width: 700px)",
+    "(min-width: 1360px)",
     `<a href="https://youtu.be/Le_IyYLrUtQ" target="_blank">VerVideo</a>`,
     `<iframe width="560" height="315" src="https://www.youtube.com/embed/8Bo7TVZAwTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
   );
+  newURL("formtester");
 });
 
 d.addEventListener("keydown", evt => {

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
 
 :root {
   --main-color: rgb(251, 214, 23);
@@ -29,7 +30,8 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: "Nunito", sans-serif;
+  /* font-family: "Nunito", sans-serif; */
+  font-family: "Noto Serif", serif;
   /* user-select: none; */
 }
 
@@ -83,7 +85,7 @@ body {
 
 .nav_item a {
   display: block;
-  padding: 1.5rem 2rem;
+  padding: 1.2rem 2rem;
   color: var(--color-hover-a);
   font-size: 1.5rem;
   transition: all 0.3s linear;
@@ -409,7 +411,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 form {
   margin: 15px auto;
-  width: 500px;
+  width: 350px;
   height: 250px;
   display: flex;
   flex-flow: column wrap;
@@ -423,7 +425,7 @@ form {
 
 .form_content input {
   display: inline-block;
-  width: 280px;
+  width: 260px;
 }
 
 .form_input {

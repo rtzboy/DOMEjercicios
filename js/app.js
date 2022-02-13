@@ -1,4 +1,5 @@
 import { ageToDays } from "./age-day.js";
+import browserInformation from "./browser.js";
 import { darkMode } from "./btn-darkmode.js";
 import moveTop from "./btnUp.js";
 import { alarm, clock } from "./clock.js";
@@ -32,6 +33,7 @@ d.addEventListener("DOMContentLoaded", evt => {
     `<iframe width="560" height="315" src="https://www.youtube.com/embed/8Bo7TVZAwTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
   );
   newURL("formtester");
+  browserInformation("user_agent");
 });
 
 d.addEventListener("keydown", evt => {

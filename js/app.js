@@ -5,6 +5,7 @@ import moveTop from "./btnUp.js";
 import { alarm, clock } from "./clock.js";
 import { moveBall, resetButton, shortCts, testUp } from "./keyevts.js";
 import hamburgerMenu from "./menu-ham.js";
+import network from "./network.js";
 import newURL from "./responsive-tster.js";
 import responsiveMedia from "./responsive_design.js";
 import tempo from "./tempo.js";
@@ -44,3 +45,5 @@ d.addEventListener("keydown", evt => {
 d.addEventListener("keyup", evt => {
   testUp(evt);
 });
+
+network(".status_web");

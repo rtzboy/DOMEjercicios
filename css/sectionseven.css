@@ -1,3 +1,25 @@
 #user_agent {
   font-size: 1.2rem;
 }
+
+.status_web {
+  position: fixed;
+  left: 10px;
+  bottom: calc(95px - 1vh);
+  z-index: 99;
+  width: 30%;
+  height: 3.5rem;
+  font-size: 2rem;
+  border-radius: 10px;
+  display: none;
+  color: white;
+}
+
+.is-online {
+  background-color: rgb(11, 189, 11);
+  color: black;
+}
+
+.is-offline {
+  background-color: rgb(226, 44, 44);
+}

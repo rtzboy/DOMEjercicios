@@ -2,7 +2,9 @@ import { ageToDays } from "./age-day.js";
 import browserInformation from "./browser.js";
 import { darkMode } from "./btn-darkmode.js";
 import moveTop from "./btnUp.js";
+import showCamera from "./camera.js";
 import { alarm, clock } from "./clock.js";
+import showGeolalization from "./geoloca.js";
 import { moveBall, resetButton, shortCts, testUp } from "./keyevts.js";
 import hamburgerMenu from "./menu-ham.js";
 import network from "./network.js";
@@ -35,6 +37,8 @@ d.addEventListener("DOMContentLoaded", evt => {
   );
   newURL("formtester");
   browserInformation("user_agent");
+  // showCamera();
+  showGeolalization();
 });
 
 d.addEventListener("keydown", evt => {

@@ -23,3 +23,25 @@
 .is-offline {
   background-color: rgb(226, 44, 44);
 }
+
+.camera_capture {
+  width: 400px;
+  height: 450px;
+  border: 2px solid var(--second-color);
+}
+
+.main_section9 > ul,
+.main_section9 > p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.main_section9 > p a {
+  font-size: 0.9rem;
+  color: var(--second-color);
+}
+
+.main_section9 > p a:hover {
+  text-decoration: underline;
+  background-color: rgba(231, 245, 32, 0.746);
+}

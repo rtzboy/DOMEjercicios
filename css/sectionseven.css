@@ -46,16 +46,24 @@
   background-color: rgba(231, 245, 32, 0.746);
 }
 
+/* filter search */
 .container_img_search {
   width: 90%;
   height: 80vh;
   margin: 20px auto;
   padding: 20px;
-  border: 2px solid black;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   overflow-y: auto;
+}
+
+.img_search {
+  transition: all 1s ease-in-out;
+}
+
+.img_search img {
+  width: 100%;
 }
 
 figure {

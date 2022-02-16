@@ -65,6 +65,7 @@ body {
   transform: translate(200%, 0);
   opacity: 0;
   transition: transform 0.8s ease-out, opacity 0.7s ease;
+  overflow-y: auto;
 }
 
 .nav.is-ve {

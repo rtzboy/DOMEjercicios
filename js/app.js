@@ -2,6 +2,7 @@ import { ageToDays } from "./age-day.js";
 import browserInformation from "./browser.js";
 import { darkMode } from "./btn-darkmode.js";
 import moveTop from "./btnUp.js";
+import busqueda from "./busqueda.js";
 import showCamera from "./camera.js";
 import { alarm, clock } from "./clock.js";
 import showGeolalization from "./geoloca.js";
@@ -39,6 +40,7 @@ d.addEventListener("DOMContentLoaded", evt => {
   browserInformation("user_agent");
   // showCamera();
   showGeolalization();
+  busqueda();
 });
 
 d.addEventListener("keydown", evt => {

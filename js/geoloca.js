@@ -9,10 +9,6 @@ export default function showGeolalization() {
 
   function pos(position) {
     let coord = position.coords;
-    console.log(coord.latitude);
-    console.log(coord.longitude);
-    console.log(coord.accuracy);
-    //     -----------
     $section.innerHTML += `
     <p>Tu posicion actual es:</p>
     <ul>

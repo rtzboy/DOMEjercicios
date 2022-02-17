@@ -98,3 +98,14 @@ figcaption {
   border-radius: 30px;
   border: 3px solid red;
 }
+
+/* Sorteo Digital */
+
+.list_giveaway {
+  margin: 20px;
+}
+
+.list_giveaway .list_giveaway_item {
+  font-size: 1.2rem;
+  padding: 0.2rem;
+}

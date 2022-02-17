@@ -11,6 +11,7 @@ import hamburgerMenu from "./menu-ham.js";
 import network from "./network.js";
 import newURL from "./responsive-tster.js";
 import responsiveMedia from "./responsive_design.js";
+import sorteo from "./soteo.js";
 import tempo from "./tempo.js";
 
 const d = document;
@@ -41,6 +42,7 @@ d.addEventListener("DOMContentLoaded", evt => {
   // showCamera();
   showGeolalization();
   busqueda();
+  sorteo(".btn_list_giveaway");
 });
 
 d.addEventListener("keydown", evt => {

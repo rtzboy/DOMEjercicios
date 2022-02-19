@@ -42,7 +42,11 @@ body {
 
 .header {
   background-color: rgb(251, 214, 23);
+  position: fixed;
+  top: 0;
   height: 7vh;
+  width: 100vw;
+  z-index: 99;
 }
 
 .header_title {
@@ -99,7 +103,12 @@ body {
   color: var(--second-color);
 }
 
+.main {
+  /* margin-top: 7vh; */
+}
 .main .section {
+  /* margin-top: 14vh; */
+  padding-top: 7vh;
   height: 100vh;
   text-align: center;
   font-size: 1.8rem;
@@ -468,5 +477,37 @@ form {
   .nav {
     /* width: 1200px; */
     max-width: 1200px;
+  }
+}
+
+/* NAV RESPONSIVE */
+
+@media screen and (min-width: 1250px) {
+  body {
+    width: 80vw;
+  }
+  .myham {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .btnUp {
+    left: calc(70px + 1vw);
+  }
+
+  .nav_list {
+    height: initial;
+  }
+
+  .nav {
+    z-index: 20;
+    top: 7vh;
+    bottom: 0;
+    right: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transform: translate(0, 0);
+    width: 20vw;
+    opacity: 1;
   }
 }

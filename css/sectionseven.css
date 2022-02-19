@@ -109,3 +109,112 @@ figcaption {
   font-size: 1.2rem;
   padding: 0.2rem;
 }
+
+/* RESPONSIVE SLIDER */
+
+.main_section12 {
+  position: relative;
+}
+
+.slide_container {
+  /* width: 80%;
+  height: 80vh; */
+  /* max-width: 1200px; */
+  width: 80%;
+  position: relative;
+  height: 800px;
+  margin: 30px auto;
+}
+
+.container_img_txt {
+  position: absolute;
+  transition: all 1.5s ease-in-out;
+}
+
+.fade {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.active_img_txt {
+  opacity: 1;
+  visibility: visible;
+}
+
+.flecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--color-white);
+  width: 45px;
+  height: 55px;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+
+.flecha:hover {
+  background-color: var(--second-color);
+  color: var(--color-hover-a);
+  border: 2px solid var(--color-hover-a);
+}
+
+.arrowRight1 {
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 99;
+  border-radius: 0 9px 9px 0;
+}
+
+.arrowRight2 {
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 9px 0 0 9px;
+}
+
+.number_txt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--main-color);
+}
+
+.slide_container_img {
+  width: 100%;
+  display: inline-block;
+}
+
+.img_caption {
+  width: auto;
+  height: 800px;
+  font-size: 1.7rem;
+  display: block;
+}
+
+/* .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+} */

@@ -6,6 +6,7 @@ import busqueda from "./busqueda.js";
 import showCamera from "./camera.js";
 import { alarm, clock } from "./clock.js";
 import showGeolalization from "./geoloca.js";
+import scrollMark from "./intersccion.js";
 import { moveBall, resetButton, shortCts, testUp } from "./keyevts.js";
 import hamburgerMenu from "./menu-ham.js";
 import network from "./network.js";
@@ -45,6 +46,7 @@ d.addEventListener("DOMContentLoaded", evt => {
   busqueda();
   sorteo(".btn_list_giveaway");
   slideResponsive(".container_img_txt");
+  scrollMark();
 });
 
 d.addEventListener("keydown", evt => {

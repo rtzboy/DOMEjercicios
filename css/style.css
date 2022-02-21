@@ -59,13 +59,11 @@ body {
   position: fixed;
   z-index: 19;
   top: 0;
-  width: 100%;
   bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   background-color: var(--color-hover-nav);
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  /* transform: translate(0, -100%); */
-  /* transform: translate(0, 100%); */
   transform: translate(200%, 0);
   opacity: 0;
   transition: transform 0.8s ease-out, opacity 0.7s ease;
@@ -77,12 +75,14 @@ body {
   opacity: 1;
 }
 
-.nav_list {
+.section {
+  border: 2px solid red;
+}
+
+.nav {
   display: flex;
   justify-content: center;
-  height: 80vh;
   flex-flow: column;
-  overflow-y: auto;
 }
 
 .nav_list li {
@@ -103,13 +103,10 @@ body {
   color: var(--second-color);
 }
 
-.main {
-  /* margin-top: 7vh; */
-}
 .main .section {
-  /* margin-top: 14vh; */
-  padding-top: 7vh;
-  height: 100vh;
+  /* margin-top: 7vh; */
+  /* padding-top: 7vh; */
+  height: 93vh;
   text-align: center;
   font-size: 1.8rem;
   color: var(--second-color);
@@ -484,8 +481,33 @@ form {
 
 @media screen and (min-width: 1250px) {
   body {
-    width: 80vw;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 7vh auto;
+    grid-template-areas:
+      "header header"
+      "section panel";
   }
+
+  .header {
+    grid-area: header;
+  }
+
+  .main {
+    grid-area: section;
+  }
+
+  .nav {
+    grid-area: panel;
+    position: sticky;
+    z-index: 20;
+    top: 7vh;
+    transform: translate(0, 0);
+    justify-content: flex-start;
+    align-self: start;
+    opacity: 1;
+  }
+
   .myham {
     visibility: hidden;
     opacity: 0;
@@ -495,19 +517,14 @@ form {
     left: calc(70px + 1vw);
   }
 
-  .nav_list {
+  /* .nav_list {
     height: initial;
-  }
+  } */
 
-  .nav {
-    z-index: 20;
-    top: 7vh;
-    bottom: 0;
-    right: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    transform: translate(0, 0);
-    width: 20vw;
-    opacity: 1;
+  .nav_item a:hover,
+  .nav_item a.active {
+    font-weight: bold;
+    background-color: var(--color-hover-a);
+    color: var(--second-color);
   }
 }

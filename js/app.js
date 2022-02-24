@@ -10,9 +10,11 @@ import scrollMark from "./intersccion.js";
 import { moveBall, resetButton, shortCts, testUp } from "./keyevts.js";
 import hamburgerMenu from "./menu-ham.js";
 import network from "./network.js";
+import regForm from "./reg-form.js";
 import newURL from "./responsive-tster.js";
 import responsiveMedia from "./responsive_design.js";
 import slideResponsive from "./slide-responsive.js";
+import smartVideo from "./smart-video.js";
 import sorteo from "./soteo.js";
 import tempo from "./tempo.js";
 
@@ -47,6 +49,8 @@ d.addEventListener("DOMContentLoaded", evt => {
   sorteo(".btn_list_giveaway");
   slideResponsive(".container_img_txt");
   scrollMark();
+  smartVideo();
+  regForm();
 });
 
 d.addEventListener("keydown", evt => {

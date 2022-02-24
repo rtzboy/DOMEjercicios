@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+
 #user_agent {
   font-size: 1.2rem;
 }
@@ -218,3 +221,109 @@ figcaption {
     opacity: 1;
   }
 } */
+
+/* video inteligente */
+
+.section .video_container {
+  margin: 2rem auto;
+  width: 390px;
+  border: 2px solid var(--second-color);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.82);
+}
+
+/* formulario de contacto */
+
+.main_section14 form {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  --color-valid: rgb(36, 233, 18);
+  --color-invalid: rgb(202, 32, 32);
+}
+
+.field input {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0.1rem 0.6rem;
+  border: 2px solid var(--second-color);
+  font-family: "Noto Serif", serif;
+}
+
+.textbox {
+  width: 600px;
+  height: 100px;
+}
+
+.textbox textarea {
+  padding: 0.5rem;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 1rem;
+  border: 2px solid var(--second-color);
+  outline: none;
+  border-radius: 10px;
+  font-family: "Noto Serif", serif;
+  letter-spacing: 0.04rem;
+  resize: none;
+}
+
+.submit_contacto button {
+  padding: 0.6rem 1.1rem;
+  border: 2px solid var(--second-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit_contacto button:hover {
+  background-color: var(--second-color);
+  color: var(--second-color-aux);
+  transform: scale(1.1);
+}
+
+/* formulario entradas invalidas */
+
+.form_send_validate [required]:invalid {
+  border-color: var(--color-invalid);
+}
+
+.form_send_validate [required]:valid {
+  border-color: var(--color-valid);
+}
+
+.error_type {
+  position: absolute;
+  width: 100%;
+  height: 23px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  background-color: rgb(255, 102, 0);
+  color: white;
+  text-align: center;
+  z-index: 55;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.error_type.active_val {
+  visibility: visible;
+  opacity: 1;
+}
+/* loader */
+
+.none_loading {
+  display: none;
+}

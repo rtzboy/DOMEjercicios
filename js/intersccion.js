@@ -1,7 +1,7 @@
 const d = document;
 
 export default function scrollMark() {
-  console.log("ok!!");
+  // console.log("ok!!");
   const $main = d.querySelectorAll("section[data-scroll-spy]");
 
   const opts = {

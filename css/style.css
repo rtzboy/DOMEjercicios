@@ -38,6 +38,8 @@ html {
 body {
   position: relative;
   background-color: var(--background-color);
+  /* height: 93vh; */
+  /* margin-top: 7vh; */
 }
 
 .header {

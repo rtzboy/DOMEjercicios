@@ -77,9 +77,9 @@ body {
   opacity: 1;
 }
 
-.section {
+/* .section {
   border: 2px solid red;
-}
+} */
 
 .nav {
   display: flex;

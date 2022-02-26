@@ -16,6 +16,8 @@ import responsiveMedia from "./responsive_design.js";
 import slideResponsive from "./slide-responsive.js";
 import smartVideo from "./smart-video.js";
 import sorteo from "./soteo.js";
+import speechOut from "./speech-chrome.js";
+import speehOut from "./speech-chrome.js";
 import tempo from "./tempo.js";
 
 const d = document;
@@ -51,6 +53,7 @@ d.addEventListener("DOMContentLoaded", evt => {
   scrollMark();
   smartVideo();
   regForm();
+  speechOut();
 });
 
 d.addEventListener("keydown", evt => {
